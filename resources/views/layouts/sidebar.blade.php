@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Ewit LMS')</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    @vite(['resources/css/sidebar.css'])
-</head>
-<body>
-    @yield('content')
-    <aside class="sidebar" id="sidebar">
+<!-- Sidebar Component -->
+<aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <a href="/" class="logo">Ewit<span>.lk</span></a>
+            <p class="logo">Ewit<span>.lk</span></p>
             <button class="sidebar-close" id="sidebarClose">×</button>
         </div>
         
         <nav class="sidebar-nav">
             <ul class="nav-menu">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="#" class="nav-link">
                         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -52,7 +42,6 @@
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                         </svg>
                         <span>Messages</span>
-                        <span class="nav-badge">3</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -87,5 +76,3 @@
             </a>
         </div>
     </aside>
-</body>
-</html>
