@@ -1,0 +1,551 @@
+/* Ewit LMS - Register Page Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --dark: #111111;
+    --darker: #1a1a1a;
+    --gray-dark: #2a2a2a;
+    --gray: #4a4a4a;
+    --gray-light: #6a6a6a;
+    --gray-lighter: #9a9a9a;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Register Container */
+.register-container {
+    min-height: 100vh;
+}
+
+/* Left Side - Branding */
+.register-left {
+    background: var(--dark);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.brand {
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--gray-light);
+}
+
+.tagline {
+    color: var(--gray-lighter);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.illustration {
+    background: var(--darker);
+    border-radius: 24px;
+    padding: 2rem;
+    max-width: 450px;
+}
+
+.illustration-content {
+    background: var(--gray-dark);
+    border-radius: 16px;
+    padding: 2rem;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mock-header {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mock-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gray);
+}
+
+.mock-dot:first-child { background: #ff5f57; }
+.mock-dot:nth-child(2) { background: #febc2e; }
+.mock-dot:nth-child(3) { background: #28c840; }
+
+.mock-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mock-line {
+    height: 12px;
+    background: var(--darker);
+    border-radius: 6px;
+}
+
+.mock-line.short { width: 60%; }
+.mock-line.medium { width: 80%; }
+.mock-line.long { width: 95%; }
+
+.mock-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.mock-card {
+    background: var(--darker);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 80px;
+}
+
+/* Right Side - Form */
+.register-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background: var(--white);
+    overflow-y: auto;
+    margin-left: 50%;
+    min-height: 100vh;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+.form-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--black);
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: var(--gray-light);
+    font-size: 1rem;
+}
+
+/* Form Styles */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.alert-danger {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.alert-danger ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.alert-danger li {
+    margin-bottom: 0.25rem;
+}
+
+.alert-danger li:last-child {
+    margin-bottom: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.form-input {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--dark);
+    background: var(--white);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--dark);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-input::placeholder {
+    color: var(--gray-lighter);
+}
+
+/* International Tel Input Styles */
+.iti {
+    width: 100%;
+}
+
+.iti__tel-input {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--dark);
+    background: var(--white);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.iti__tel-input:focus {
+    outline: none;
+    border-color: var(--dark);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.iti__country-container {
+    border-radius: 10px 0 0 10px;
+}
+
+.iti__selected-country {
+    background: var(--off-white);
+    border-radius: 8px 0 0 8px;
+    padding: 0 0.75rem;
+}
+
+.iti__dropdown {
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.iti__search-input {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--off-white);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.iti__search-input:focus {
+    outline: none;
+    border-color: var(--dark);
+}
+
+.iti__country {
+    padding: 0.5rem 1rem;
+}
+
+.iti__country:hover {
+    background: var(--off-white);
+}
+
+.iti__country--highlight {
+    background: var(--off-white);
+}
+
+/* Textarea Styles */
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Gender Radio Button Styles */
+.gender-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.875rem 1.5rem;
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.gender-option:hover {
+    border-color: var(--gray-lighter);
+}
+
+.gender-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--black);
+    cursor: pointer;
+}
+
+.gender-option:has(input[type="radio"]:checked) {
+    border-color: var(--black);
+    background: var(--off-white);
+}
+
+.gender-option:has(input[type="radio"]:checked) .gender-label {
+    font-weight: 600;
+}
+
+.gender-label {
+    font-size: 0.95rem;
+    color: var(--dark);
+    transition: font-weight 0.3s ease;
+}
+
+/* Grade Radio Button Styles */
+.grade-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.grade-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.875rem 1.5rem;
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.grade-option:hover {
+    border-color: var(--gray-lighter);
+}
+
+.grade-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--black);
+    cursor: pointer;
+}
+
+.grade-option:has(input[type="radio"]:checked) {
+    border-color: var(--black);
+    background: var(--off-white);
+}
+
+.grade-option:has(input[type="radio"]:checked) .Grade-label {
+    font-weight: 600;
+}
+
+.Grade-label {
+    font-size: 0.95rem;
+    color: var(--dark);
+    transition: font-weight 0.3s ease;
+}
+
+/* Select Dropdown Styles */
+.form-select {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--dark);
+    background: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236a6a6a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--dark);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-select option {
+    padding: 0.5rem;
+    background: var(--white);
+    color: var(--dark);
+}
+
+.gender-label {
+    font-size: 0.95rem;
+    color: var(--dark);
+    transition: font-weight 0.3s ease;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.875rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--black);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--gray-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Login Link */
+.login-link {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.login-link a {
+    color: var(--black);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: var(--gray-dark);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .register-container {
+        grid-template-columns: 1fr;
+    }
+
+    .register-left {
+        display: none;
+    }
+
+    .register-right {
+        padding: 2rem;
+        margin-left: 0;
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-right {
+        padding: 1.5rem;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-right {
+        padding: 3rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-input {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+    }
+}
