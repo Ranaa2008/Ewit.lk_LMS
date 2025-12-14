@@ -1,0 +1,114 @@
+/* Ewit LMS - Gig/Course Card Layout Styles */
+
+/* Course Card */
+.course-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 400px;
+}
+
+.course-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.course-image {
+    height: 140px;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-placeholder svg {
+    width: 48px;
+    height: 48px;
+    color: var(--gray-dark);
+}
+
+.course-content {
+    padding: 1.25rem;
+}
+
+.course-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.course-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0.5rem 0;
+}
+
+.course-progress {
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--off-white);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--dark);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: var(--gray-light);
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-lessons {
+    font-size: 0.85rem;
+    color: var(--gray-lighter);
+}
+
+.continue-btn {
+    background: var(--dark);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.continue-btn:hover {
+    background: var(--gray-dark);
+}
+
+/* Courses Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive Styles for Course Cards */
+@media (max-width: 768px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
